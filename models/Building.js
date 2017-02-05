@@ -26,16 +26,14 @@ var buildingSchema = new mongoose.Schema({
     type: Boolean,
     required: true
   },
-  meta: {
-    lastUpgraded: {
-      type: Date,
-      required: true
-    },
-    createdOn: {
-      type: Date,
-      required: true
-    },
-},
+  lastUpgraded: {
+    type: Date,
+    required: true
+  },
+  createdOn: {
+    type: Date,
+    required: true
+  },
 upgrading: {
   type: Boolean,
 }

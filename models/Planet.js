@@ -3,6 +3,15 @@ var mongoose = require('mongoose')
 import Building from './Building'
 var buildings = Building
 
+var costSchema = new mongoose.Schema({
+  metal: {
+    type: Number
+  },
+  crystal: {
+    type: Number
+  }
+})
+
 var buildingSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -13,12 +22,7 @@ var buildingSchema = new mongoose.Schema({
     required: true
   },
   upgradeCost: {
-    metal: {
-      type: Number,
-    },
-    crystal: {
-      type: Number,
-    }
+    type: costSchema
   },
   upgradeTime: {
     type: Number,
@@ -28,16 +32,14 @@ var buildingSchema = new mongoose.Schema({
     type: Boolean,
     required: true
   },
-  meta: {
-    lastUpgraded: {
-      type: Date,
-      required: true
-    },
-    createdOn: {
-      type: Date,
-      required: true
-    },
-},
+  lastUpgraded: {
+    type: Date,
+    required: true
+  },
+  createdOn: {
+    type: Date,
+    required: true
+  },
 upgrading: {
   type: Boolean,
 }
