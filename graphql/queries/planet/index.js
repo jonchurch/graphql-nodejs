@@ -1,7 +1,7 @@
 import planet from './single';
-// import planets from './mutiple';
+import planets from './multiple';
 
 export default {
   planet,
-  // planets
+  planets
 };
