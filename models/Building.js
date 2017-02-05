@@ -9,7 +9,7 @@ var buildingSchema = new mongoose.Schema({
   category: {
     type: String,
     required: true
-  }
+  },
   upgradeCost: {
     metal: {
       type: Number,
