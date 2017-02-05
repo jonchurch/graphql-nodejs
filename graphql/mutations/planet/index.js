@@ -1,9 +1,9 @@
 import addPlanet from './add';
-// import removeAllComments from './remove-all';
-// import removeComment from './remove';
+import removeAllPlanets from './remove-all';
+// import removePlanet from './remove';
 
 export default {
   addPlanet,
-  // removeComment,
-  // removeAllComments
+  // removePlanet,
+  removeAllPlanets
 };
