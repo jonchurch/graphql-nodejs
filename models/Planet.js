@@ -1,7 +1,5 @@
 
 var mongoose = require('mongoose')
-import Building from './Building'
-var buildings = Building
 
 var costSchema = new mongoose.Schema({
   metal: {
@@ -13,6 +11,11 @@ var costSchema = new mongoose.Schema({
 })
 
 var buildingSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    required: true,
+    unique: true
+  },
   name: {
     type: String,
     required: true
@@ -71,4 +74,4 @@ var planetSchema = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model('Planet', planetSchema)
+export default mongoose.model('Planet', planetSchema);

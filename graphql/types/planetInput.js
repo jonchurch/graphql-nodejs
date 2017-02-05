@@ -1,19 +1,20 @@
 import {
-  GraphQLObjectType,
+  GraphQLInputObjectType,
   GraphQLNonNull,
   GraphQLString,
   GraphQLID,
+  GraphQLBoolean,
   GraphQLInt,
   GraphQLList
 } from 'graphql';
 
-import Building from './building'
+import BuildingInput from './buildingInput'
 
-export default new GraphQLObjectType({
-  name: 'Planet',
+export default new GraphQLInputObjectType({
+  name: 'PlanetInput',
   fields: {
   _id: {
-    type: new GraphQLNonNull(GraphQLID),
+    type: GraphQLID,
   },
   name: {
     type: GraphQLString,
@@ -25,8 +26,7 @@ export default new GraphQLObjectType({
     type: GraphQLInt,
 },
 buildings: {
-  type:  GraphQLString //new GraphQLList(Building)
+  type: BuildingInput
 }
-
 }
 })
