@@ -25,7 +25,7 @@ export default new GraphQLObjectType({
     type: GraphQLInt,
 },
 buildings: {
-  type:  GraphQLString //new GraphQLList(Building)
+  type:  GraphQLString//new GraphQLList(Building)
 }
 
 }

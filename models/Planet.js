@@ -49,11 +49,13 @@ upgrading: {
 })
 
 var planetSchema = new mongoose.Schema({
-  id: {
-    type: Number,
-    required: true,
-    unique: true
-  },
+  // Was failing validation when I had an id and wasn't passing it
+  // The example does not give ID's to it's models
+  // id: {
+  //   type: Number,
+  //   required: true,
+  //   unique: true
+  // },
   name: {
     type: String,
     required: true
@@ -67,7 +69,7 @@ var planetSchema = new mongoose.Schema({
     required: true
 },
   buildings: {
-    type: [buildingSchema]
+    type: String//[buildingSchema]
   }
 
 
