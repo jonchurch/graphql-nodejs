@@ -20,6 +20,9 @@ export default new GraphQLObjectType({
     name: {
       type: GraphQLString,
     },
+    category: {
+      type: GraphQLString
+    },
     upgradeCost: {
       type: CostType,
     },
