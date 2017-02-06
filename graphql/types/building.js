@@ -24,7 +24,7 @@ export default new GraphQLObjectType({
       type: GraphQLString
     },
     upgradeCost: {
-      type: CostType,
+      type: GraphQLString//CostType,
     },
     upgradeTime: {
       type: GraphQLInt,

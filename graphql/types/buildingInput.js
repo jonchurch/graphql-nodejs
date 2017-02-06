@@ -23,7 +23,7 @@ export default new GraphQLInputObjectType({
       type: GraphQLString
     },
     upgradeCost: {
-      type: CostInput,
+      type: GraphQLString//CostInput,
     },
     upgradeTime: {
       type: GraphQLInt,

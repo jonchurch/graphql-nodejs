@@ -11,11 +11,11 @@ var costSchema = new mongoose.Schema({
 })
 
 var buildingSchema = new mongoose.Schema({
-  id: {
-    type: Number,
-    required: true,
-    unique: true
-  },
+  // id: {
+  //   type: Number,
+  //   required: true,
+  //   unique: true
+  // },
   name: {
     type: String,
     required: true
@@ -25,7 +25,7 @@ var buildingSchema = new mongoose.Schema({
     required: true
   },
   upgradeCost: {
-    type: costSchema
+    type: String
   },
   upgradeTime: {
     type: Number,
@@ -36,11 +36,11 @@ var buildingSchema = new mongoose.Schema({
     required: true
   },
   lastUpgraded: {
-    type: Date,
+    type: Number,
     required: true
   },
   createdOn: {
-    type: Date,
+    type: Number,
     required: true
   },
 upgrading: {
@@ -69,7 +69,7 @@ var planetSchema = new mongoose.Schema({
     required: true
 },
   buildings: {
-    type: String//[buildingSchema]
+    type: [buildingSchema]
   }
 
 

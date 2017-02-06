@@ -26,7 +26,7 @@ export default new GraphQLInputObjectType({
     type: GraphQLInt,
 },
 buildings: {
-  type: GraphQLString//BuildingInput
+  type: new GraphQLList(BuildingInput)
 }
 }
 })
