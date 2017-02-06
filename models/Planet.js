@@ -20,12 +20,16 @@ var buildingSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  level: {
+    type: Number,
+    required: true,
+  },
   category: {
     type: String,
     required: true
   },
   upgradeCost: {
-    type: String
+    type: costSchema
   },
   upgradeTime: {
     type: Number,

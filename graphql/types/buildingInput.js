@@ -19,11 +19,14 @@ export default new GraphQLInputObjectType({
     name: {
       type: GraphQLString,
     },
+    level: {
+      type: GraphQLInt
+    },
     category: {
       type: GraphQLString
     },
     upgradeCost: {
-      type: GraphQLString//CostInput,
+      type: CostInput,
     },
     upgradeTime: {
       type: GraphQLInt,

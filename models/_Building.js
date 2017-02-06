@@ -10,14 +10,17 @@ var buildingSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  level: {
+    type: Number,
+    required: true
+  }
   upgradeCost: {
-    type: String,
-    // metal: {
-    //   type: Number,
-    // },
-    // crystal: {
-    //   type: Number,
-    // }
+    metal: {
+      type: Number,
+    },
+    crystal: {
+      type: Number,
+    }
   },
   upgradeTime: {
     type: Number,

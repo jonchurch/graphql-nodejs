@@ -15,16 +15,18 @@ export default new GraphQLObjectType({
   fields: {
     _id: {
       type: new GraphQLNonNull(GraphQLID),
-
     },
     name: {
       type: GraphQLString,
+    },
+    level: {
+      type: GraphQLInt
     },
     category: {
       type: GraphQLString
     },
     upgradeCost: {
-      type: GraphQLString//CostType,
+      type: CostType,
     },
     upgradeTime: {
       type: GraphQLInt,
